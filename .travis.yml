@@ -12,6 +12,7 @@ matrix:
               key_url: "https://packages.microsoft.com/keys/microsoft.asc"
           packages:
             - powershell
+            - python3-venv
 install:
   - sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 10
   - . ./scripts/init-env.sh
