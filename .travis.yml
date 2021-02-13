@@ -1,36 +1,36 @@
 language: generic
-
 matrix:
   include:
-    - os: linux
-      dist: bionic
-      sudo: false
-      addons:
-        apt:
-          sources:
-            - sourceline: "deb [arch=amd64] https://packages.microsoft.com/ubuntu/18.04/prod bionic main"
-              key_url: "https://packages.microsoft.com/keys/microsoft.asc"
-          packages:
-            - powershell
+  - os: linux
+    dist: bionic
+    sudo: false
+    addons:
+      apt:
+        sources:
+        - sourceline: deb [arch=amd64] https://packages.microsoft.com/ubuntu/18.04/prod
+            bionic main
+          key_url: https://packages.microsoft.com/keys/microsoft.asc
+        packages:
+        - powershell
 before_install:
-  - sudo apt-get update
-  - sudo apt-get install python3.6-venv
+- sudo apt-get update
+- sudo apt-get install python3.6-venv
 install:
-  - sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 10
-  - . ./scripts/init-env.sh
-  - init-env
-# command to run tests
+- sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 10
+- ". ./scripts/init-env.sh"
+- init-env
 script:
-  - pwsh ./scripts/run.ps1
-
+- pwsh ./scripts/run.ps1
 deploy:
   provider: releases
-  api_key: "${GH_TOKEN}"
   file:
-    - ./dist/FiraCodeScript-Regular.ttf
-    - ./dist/FiraCodeScript-Italic.ttf
-    - ./dist/FiraCodeScript-Bold.ttf
+  - "./dist/FiraCodeScript-Regular.ttf"
+  - "./dist/FiraCodeScript-Italic.ttf"
+  - "./dist/FiraCodeScript-Bold.ttf"
   skip_cleanup: true
   on:
     tags: true
   edge: true
+env:
+  global:
+    secure: TL2lksXOkG7GVzCcxrFPUuWHizacsSoKGTv99HR0M+pY418CbTQBkt/bMt668ZVU+qqS/n59e7MbUhOot1dA0rap1yWsXcyCTL8BEGhiEesYN+KJjLuJhkTB7iToDCiwJdc0ppHD/yJv9uNxqsf+vKUKw8NOQNZgt3Ve8pal1wzXysEBfYYv5tjCvposLPt3ztK7OA7p55uk8VX0iqymRGScWeG6v3RjWG7iHmTp+m7JoTpLz+MOTNVHyCEMIyoVHaXLjDgjItJzk00IpislAIIOKUlxfQLgemLYc2tCYOFoiZwI97wveuxadGMOhtNSnE7PgxS8K8/tSKCswK6Z+11eRZ9xkb1psHa4NUbTGA/4vs1fXAszQoube8Mm52MxKCzRXyfwGFYGMQwtDd9sP/K8+HhElLKKPJTvngs3I7GLXbNGMLrqHlDWwQMKE+V+r6aBRPsEANATddykSi1f8892mOGqvSkWksOdMZqof/1YEy/vqD3i2S6aLRXvkZ2rl3FiRO0Z35Ona0hdw/fCllMBLZRCEiFvD9mVuBf/BLPJtByxblZ7TOZGN/Jk3jOIX70ENOyWsS7tRt1Mpsz55h6T0T8jyWPb5HyfjsdwCCfsmr6EhW6KFWFXvr4BJYBNujyN5+9heZt1kHo2tLOzq2atV9akfsMNMm+7PjRXu1k=
