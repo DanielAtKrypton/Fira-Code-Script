@@ -12,10 +12,11 @@ matrix:
               key_url: "https://packages.microsoft.com/keys/microsoft.asc"
           packages:
             - powershell
+before_install:
+  - sudo apt-get update
+  - sudo apt install python3-venv
 install:
   - sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 10
-  - sudo apt update
-  - sudo apt install python3-venv
   - . ./scripts/init-env.sh
   - init-env
 # command to run tests
