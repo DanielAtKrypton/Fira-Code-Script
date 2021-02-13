@@ -47,6 +47,7 @@ setup(
     extras_require={
         'dev': [
             'autopep8',
+            'bumpversion'
         ],
         'test': [
             'pytest>=4.6',
