@@ -25,7 +25,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="fira-code-script",
-    version="0.0.2",
+    version="0.0.3",
     author="Daniel Kaminski de Souza",
     author_email="daniel@kryptonunite.com",
     description="Font for code development base on Fira Code.",
