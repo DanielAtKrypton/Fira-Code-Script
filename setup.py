@@ -24,7 +24,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(
-    name="fira-code-i-script",
+    name="fira-code-script",
     version="0.0.0",
     author="Daniel Kaminski de Souza",
     author_email="daniel@kryptonunite.com",
