@@ -3,18 +3,18 @@ language: generic
 matrix:
   include:
     - os: linux
-      dist: trusty
+      dist: bionic
       sudo: false
       addons:
         apt:
           sources:
-            - sourceline: "deb [arch=amd64] https://packages.microsoft.com/ubuntu/14.04/prod trusty main"
+            - sourceline: "deb [arch=amd64] https://packages.microsoft.com/ubuntu/18.04/prod bionic main"
               key_url: "https://packages.microsoft.com/keys/microsoft.asc"
           packages:
             - powershell
 before_install:
   - sudo apt-get update
-  - sudo apt-get install python3.4-venv
+  - sudo apt-get install python3.6-venv
 install:
   - sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 10
   - . ./scripts/init-env.sh
