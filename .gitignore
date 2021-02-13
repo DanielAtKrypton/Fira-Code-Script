@@ -1,0 +1,5 @@
+.venv
+**/__pycache__
+.vscode
+temporary_folder
+fira_code_i_script.egg-info
