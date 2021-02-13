@@ -14,7 +14,7 @@ matrix:
             - powershell
 before_install:
   - sudo apt-get update
-  - sudo apt install python3-venv
+  - sudo apt-get install python3-venv
 install:
   - sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 10
   - . ./scripts/init-env.sh
