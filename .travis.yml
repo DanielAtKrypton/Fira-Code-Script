@@ -21,4 +21,4 @@ install:
   - init-env
 # command to run tests
 script:
-  - pwsh ./scripts/run.sh
+  - pwsh ./scripts/run.ps1
