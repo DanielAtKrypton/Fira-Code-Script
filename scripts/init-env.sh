@@ -11,6 +11,6 @@ init-env(){
     python -m pip install --upgrade pip
     pip install wheel
     pip install pip-tools
-    pwsh scripts/pip-sync.ps1
+    pip-sync ./requirements/requirements.txt
     pip install -e .[dev,test,docs]
 }
