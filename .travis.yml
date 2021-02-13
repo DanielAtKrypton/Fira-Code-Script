@@ -13,7 +13,7 @@ matrix:
           packages:
             - powershell
 install:
-  - sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.6 10
+  - sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 10
   - . ./scripts/init-env.sh
   - init-env
 # command to run tests
