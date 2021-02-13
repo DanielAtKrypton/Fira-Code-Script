@@ -22,3 +22,14 @@ install:
 # command to run tests
 script:
   - pwsh ./scripts/run.ps1
+
+deploy:
+  provider: releases
+  api_key: "${GH_TOKEN}"
+  file:
+    - ./dist/FiraCodeScript-Regular.ttf
+    - ./dist/FiraCodeScript-Italic.ttf
+    - ./dist/FiraCodeScript-Bold.ttf
+  skip_cleanup: true
+  on:
+    tags: true
