@@ -17,13 +17,13 @@ before_install:
 - sudo apt-get install python3.6-venv
 install:
 - sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 10
-- . ./scripts/init-env.sh
+- ". ./scripts/init-env.sh"
 - init-env
 script:
 - pwsh ./scripts/run.ps1
 deploy:
   provider: releases
-  api_key: ${GH_TOKEN}
+  api_key: "${GH_TOKEN}"
   file:
   - "./dist/FiraCodeScript-Regular.ttf"
   - "./dist/FiraCodeScript-Italic.ttf"
@@ -32,3 +32,6 @@ deploy:
   on:
     tags: true
   edge: true
+env:
+  global:
+    secure: DqVriDDpmHdmr2w9+cGssXaW3cvSRdzZwZXzTIdE6d7pjOiUqfIAyp4dSOcjm1g7PpvfX8DTAt5YTVsiPTPvsWjtN/+XB8v4HFbKVwmX0aftFes0s+UAZJ/9uzifpWmzufMUpE+3fV/1MW3nrzsyHwFK+5GeB2Yx/MYx5yCEXlizA4/1NY+WYvsTfi8UZuW/mOks4gAWLqx1mw1xxfbqEcdqyE84WMilhI+6eRz3+35/UUtXLaj/oh3dlZy8GuTjhRmq6vQputtCo5U27oQMFPYj28ZUpAKZII6PduYL6m0NEuqjGTL5c5SPd5wQTF8qXNpm/j57LXhIFtdmfAO52/cISIeZ39r4wD26Dnmz0aFEjEbiSEHvRdntYKc1wMXlfDWM/TjZRtXuNATi1/0knBkjqyVfZyCzTfsWyqJaQM7s1CNaa96arjZrXykcI740DGpihw3rgzsLJ2nNkP00aabpktASQjcmI5ttp2gtLjmB/DmVM4QYfhzjcsN0fIDrceLpH3EfiKcJNBx0gjxfDQ1dnLaGtRftd2SaIAoqBEDVk3I8XKTgF+LH/OY1GoT8PAbzEAqIbSiq1deZLKJMMBIDmxwy7U55UpM87GDIW7/m/1CGTx9F+mO0OkADXLFCXiKIV7Q99OcIgqsYzu0DHmSA3vIpK+Aeu2/Y+05AHBA=
