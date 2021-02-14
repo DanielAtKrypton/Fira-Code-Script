@@ -23,7 +23,8 @@ script:
 - pwsh ./scripts/run.ps1
 deploy:
   provider: releases
-  api_key: "$GH_TOKEN"
+  api_key:
+    secure: kb5zFDmLuDF2ASZrwdjY+bgixa1IQrAZzqSI92x9qJnXWhPMqOqJamKr2+lucBYQogj3AwDwwzsdj9Yu+OOz6dB/ZTERaZr00xquGc59akwntxjiEu3Xfmq35oUtjUrlDLJRok1t+VjmUsBC0RjvhJEx/6btFkZdOkZMBmV3B5gUWgNbMWfoltU1jpeVe1UrIlsQbrZIlfliEyLiT97GEfYKbEYMFm8XW5dPT7Qim+JegD+04XhM7xWJ6nWkyh9VczEM3H+BZoqQi2LSrD30TSxRXuvteUaZjuvkbJI9/PKoSdqXFAo9LhFF3XNR0gXqSt279CYRkXut7ipBNOx3joCSLcD/U5mZIuI3JpuLrdhUag4llv8rI3rx6fBakEXSzvr8YpqlJCQQL63Yiudu7baBNZv8PRfRhmfQjHalu112RWGN1urYIlKNYlusRecd12TTeFvARENUahemtbiP1Km3M2MLCNJfuq3Z0lhiCzryNxbSub7eDMszh6ei2cg2G3xO1yI/EP7Pd9CZooEVRd89HWHF1cCeHhEks8TdiYIcABPoCFfIsT2WAVb5DQPC/t+kdGdGgcAtYo/qDyspje+8/gBjimVNIiBf92Qr5N7BjJVJ0iEPflBEQg7avq7iXisyXjSjB7itLyNx5fhI4EdzSfLRMs0jxx09JVQYlxI=
   file_glob: true
   file:
   - dist/FiraCodeScript-*.ttf
