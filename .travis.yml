@@ -23,11 +23,14 @@ script:
 - pwsh ./scripts/run.ps1
 deploy:
   provider: releases
-  api_key: $GH_TOKEN
+  api_key: "$GH_TOKEN"
   file_glob: true
   file:
-  - "dist/FiraCodeScript-*.ttf"
+  - dist/FiraCodeScript-*.ttf
   skip_cleanup: true
   on:
     tags: true
   edge: true
+env:
+  global:
+    secure: bBbg4n1Yyq3OYpxVbJ1dgnTShNQrNoMLyfMXgp0oxAQwqxqOQKxPo/oNJ4Qms5D40bRsEC1Aa0RQTxyn7yb4cXo+fkrj4JE1ZW7o8tjgV0YfQglkU6YYJur4863ah45DrXp7jz3vzfWJzdplAycSs5TAMc8kmw2ZiY/1B+nGElHncXm75rE0xt6JZlrbXFy4YjmT1K8n+DgUd17lqWWS30/JvSNcXBqOXMnZDzKH3wpUlNqXQigXfOpjJdn/GFQWg6U6yQR7tb+8uu/Xn0dYbeYyjxTD6g/TI2VJGtt2upMu6fYtQ+bEs5Jlzx+2ap67npxUrzlOiLwMgl5qAktJAAxJED0PElb4k+q/2HktTgcP/Ho4pdGjCM1MQ2EKi/ReYns+C4tFKK8k09/G5sDP+WJNca+Kdeql/brRsZEUepetGeL+UWCnenCq23mbcJKmuzFtMx/ptoMlLSYgPACD6gQI0KxXaznVZ0SXljXX5TOQHjFvneoX0amn2O1BSpfKQ2pmoP36oIC0oa8gKgyblzfD5u1PWNYIwabjsCXyqG35nlMZblMWsLB6dQUC2e+lKfKOijeAcpdjK5Y3QJOfTlGbC6Tk5+eYETHwtN4MCb/roT+kaTZQv8tZGNcGhgmeyL0dLcREET/kFt7J0atBrZ2MwO4Gc7haXQRuU27x7OQ=
