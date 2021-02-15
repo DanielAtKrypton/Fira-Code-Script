@@ -23,8 +23,7 @@ script:
 - pwsh ./scripts/run.ps1
 deploy:
   provider: releases
-  api_key:
-    secure: kb5zFDmLuDF2ASZrwdjY+bgixa1IQrAZzqSI92x9qJnXWhPMqOqJamKr2+lucBYQogj3AwDwwzsdj9Yu+OOz6dB/ZTERaZr00xquGc59akwntxjiEu3Xfmq35oUtjUrlDLJRok1t+VjmUsBC0RjvhJEx/6btFkZdOkZMBmV3B5gUWgNbMWfoltU1jpeVe1UrIlsQbrZIlfliEyLiT97GEfYKbEYMFm8XW5dPT7Qim+JegD+04XhM7xWJ6nWkyh9VczEM3H+BZoqQi2LSrD30TSxRXuvteUaZjuvkbJI9/PKoSdqXFAo9LhFF3XNR0gXqSt279CYRkXut7ipBNOx3joCSLcD/U5mZIuI3JpuLrdhUag4llv8rI3rx6fBakEXSzvr8YpqlJCQQL63Yiudu7baBNZv8PRfRhmfQjHalu112RWGN1urYIlKNYlusRecd12TTeFvARENUahemtbiP1Km3M2MLCNJfuq3Z0lhiCzryNxbSub7eDMszh6ei2cg2G3xO1yI/EP7Pd9CZooEVRd89HWHF1cCeHhEks8TdiYIcABPoCFfIsT2WAVb5DQPC/t+kdGdGgcAtYo/qDyspje+8/gBjimVNIiBf92Qr5N7BjJVJ0iEPflBEQg7avq7iXisyXjSjB7itLyNx5fhI4EdzSfLRMs0jxx09JVQYlxI=
+  api_key: "${GH_TOKEN}"
   file_glob: true
   file:
   - dist/FiraCodeScript-*.ttf
@@ -32,3 +31,6 @@ deploy:
   on:
     tags: true
   edge: true
+env:
+  global:
+    secure: xwboYrfu5+LTYaUmU2tbgZw3CBmUGaX/RnXD1wISoz8njIYjtAyWOqg2hGyTnE6AlgNC4hDTM9NYQfRTsy9/c2hnNHdSuoN5BlI9bXVCzLgfBTzvcBcbq/DCVtH2xI72/+0iwJGtT8typXHV4H2AcgVKst0LrFEJ7ACuKasltdiT1pv8vtWY+5uainOXNkMCpbQ+/ZRbISTH2ZcTE3mXXacmHTEq0CoqZ5GnLT2c51Wkmn+i+YTEn1c4FKPUY2gmIKgaav7XkJwLPmgjpLfb5HtYZpZxbEJDHdhbFT1Pw0kYz3G54wKVejEc+4rROLGlUFH5UU0LZZ9L3rjZGHu1KO1HCof0tO62XLFUp62vbsNLHoxOpnLee0SqbZAotJVP80EfCZ08A47Wy5ITb8vkGl6J07T+OUHT5ljPLLDdBb09Ums+VljIg/JLVSYpkEAZre0+NexBSFqanuF9pK4Ylvxv7FPZfrGRZLqKR6iPCPfDQ6eHTw3o8e3gdik3QI1w4KwjRa4/m3Lo8mwEV3gxPjezu5TfopqZVWioNXziPXsy+cmbhq5Y58D3z3zJkY7mb/lLfTTEzX5F2dJMwwdjBGKBRvYST9/VPGoMq8fOtReO95RHcc76IEyXeIGmk657xNOIFTZpuZhRYlhwPu+uzMGLuh7sEbo15GWFAudkFqY=
