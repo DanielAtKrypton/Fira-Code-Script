@@ -2,9 +2,9 @@ $temp="temporary_folder"
 if(!(Test-Path -Path $temp )){
     New-Item -ItemType directory -Path $temp
 }
-ttx -d $temp ./assets/SCRPT12N.TTF
+./.venv/bin/ttx -d $temp ./assets/SCRPT12N.TTF
 
-hublatest -c ./assets/fira_code_config.ini
+./.venv/bin/hublatest -c ./assets/fira_code_config.ini
 
 # delete downloaded zip becaause extraction already took place.
 Get-ChildItem $temp/download_files/* -Include *.zip -Recurse | Remove-Item
