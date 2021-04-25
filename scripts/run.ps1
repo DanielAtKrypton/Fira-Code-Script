@@ -25,6 +25,8 @@ rm  "$temp/FiraCode-Regular.ttx" "$temp/FiraCode-Bold.ttx" "$temp/SCRPT12N.ttx"
 # generate open ttf format for each font
 Get-ChildItem $temp/*.ttx | ForEach-Object {./.venv/bin/ttx -d $temp $_}
 
+rm "$temp/FiraCodeScript-Regular.ttx" "$temp/FiraCodeScript-Bold.ttx" "$temp/FiraCodeScript-Italic.ttx"
+
 $dist="dist"
 if(!(Test-Path -Path $dist )){
     New-Item -ItemType directory -Path $dist
