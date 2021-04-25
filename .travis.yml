@@ -20,6 +20,9 @@ install:
 - "./scripts/init-env.sh"
 script:
 - pwsh ./scripts/run.ps1
+env:
+  global:
+    secure: nw5hq1bFTqBFV2TcyekwYiyVxxnBjEEpURSIbHYu9qukMbPlb4FfsdIHRCmK5HU9iCiUQtREzB+Je1Oas2rZ+9NIsru+ilzp4otkcvmeX4Rtr8PeAzui5iYEQ1nfYm3haz1315ZIq8IP03eJ68u7xVX1q+ZoaSm+0lA7d4CF+wW6ssrRmu3f1BVCF0rcQ4vwlp+GVHB4+jHCaddTRwQAKFTjCrgOde2m77/sdIsZz3DMOfg3Yx1Wf520/ayRRiDd/TylOSz3vcNECU5jzAv2hyHQzbeiET11EqGKGXRHV1GM5WLxvpBUkb1uKz6VtdU3c6Qe7N5NvZ6DJmO8i3NVcb0hdg6+r+oHml1GhdsnfQ0g6qTmQ1yXzxkuxhaBzO14/qcJVeYD+hzXhzi1cTy7zuPnrkQTxdQjTmVjGclNncsqZvWDhyZXps1b1fdGe0Tvd6rQKTvBJ9Q/oWgEW9YQY5Aqxz+IAslZ/8jwjVDomLTQUmGYVXpKl3S7u+NXwR/W7OVaMjmSHTlAR2FWWd0eZ0BeqyJJ4UuLCJOg81Jr/EbTZyonMXmVYhT33crp78OYZibmAAGG0gT4TGxiMD0nn8Icqyb7/wghM+IkekJtjPfejvyyohp4xMYEELNbirE4woNXTYbuJR4VCaaDFJHefWC9rKrqq0aklTjED+eYlak=
 deploy:
   provider: releases
   api_key: "$GITHUB_TOKEN"
@@ -30,6 +33,3 @@ deploy:
   on:
     tags: true
   edge: true
-env:
-  global:
-    secure: CCr/pokHwYs3/prpF7hrA3kQDqPwr4gHcuJaHtTd1Pwz3W6MO8FqI6fb5g6nOGUea0qzVaCWcjwJ43ziN9Lb6h9wyJFX385RDuhhpvv+I/kBQG4NRly2kUhC5gCBKmgqfDrX212rX6czCHitSiJbgjQHLDJ3iNOU3zQoYZ8mie72Dj2/OvEhzLM+ni/NcQEvqNy7YlI2OzNXpWkOBo9S3bLCs3bBspjl/AmZ6GtWtKrvjKXs7CanpSt6r9qp+uRWbyg0tRAhXLajXp8QuIzAsziU7amCEJBZrytJ3avBc2gLEc5gnFzQwxic+Fu3tjmNhOlto8RrpkeM+1Rakf+ZnWYQ6DDzPjPm7Ujloc9qCDcTnRn8fcZC0ilf9o48dxEjw1hcixz0fRcTjKNrNbUvM+k4NO9Ixup/uwRjfXorPAm/wrWO1vl/3ZKQ5sfEYHT4SZbSK1mAcIDaPBImBdWqJUF1lMMFWW7iaLZoHRfYadExpIAQfPtyErw33dOrCFYIrqA//MJO1qT1qEzWqT0lP3wb3QRNl+tJ/fspsaLyBGaIw725crgNKaX50ntOM5h1wArQcXZqlYVNkvEYO/1l1befVUVDcyFp4Zq6jVpBpI/NF0FDrdDYM1GB8Qf8s4HF6QgMzn9vBFBhI+9bCh7m/O3WG2fhxqB5psPii+JDhos=
