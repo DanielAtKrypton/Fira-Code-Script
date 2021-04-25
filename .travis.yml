@@ -22,14 +22,13 @@ script:
 - pwsh ./scripts/run.ps1
 deploy:
   provider: releases
-  api_key: "$GITHUB_TOKEN"
   file_glob: true
   file:
   - dist/FiraCodeScript-*.ttf
   skip_cleanup: true
-  true:
+  on:
     tags: true
   edge: true
 env:
   global:
-    secure: WpvrhFxlKQoP08Trrgqb10wMFV6fstBMqZzZfPZ8AxNIYOByrXogX+RRW/38Z3+A/kwFgjiqeoBlvKEVJvbQAo3suWSn0A+mo6IQbh9E0slXXau3Pj4psWGeut0eMetOCZe7/X/eW/wWgRW4tsBxb0jSOatJvw26u4gfEip+Nf/X2QQfJ4L7b74Jz0FriWzyfBOWd1YJWhrdoDqbqitf3BwUfyYWzEB6p23UpX7NAgvLjsuLUnZYCSUXSHog11ZHsZOvyJspxlHXWP2taCOl1P1PzBReRN0ryffEJjwyeAOECBpApE/DgbzvPi/2hr93ZRTZA29bxmr5Ds0ez+bBzXzFZ6zfLwljAvL0gPH+f7FszjwoEEcUHF6Hn4gIycUZ6lQ79D5USXz1FiPBrg3jYgfvathab7ftZA9+m2OxNQMjvH9kD5gtJDQyC5Nb6g3JBmrqopJa+38mOZn+jv9VdqHGNsq7MACggwRtXvcUMNehpjcNoQyxxBCEcE1Izqhv9rJsCWS785dFfd6Mmw++nY9o98xQv+oN86Q7EdYMGscTL/yg4lxZO9PKwT3rdF8sMiPYS1QycaVrDET8mTU2xalSMyDwW/pyVO4AsFSfbPAwjrBQk3x3J7Q5+YAvsWX/5DThmjjNzP8cRObd3e+MphseUucGPtap3lcBZ8vSWm0=
+    secure: w+wXM7TnwE7QPU9CD58iZ/2I3H/djcpbwk9E71PPM2XckN8oSBirxdvrB6OqFZkPvPtl4cBjDIzNyI4x6tUHcOHiGc4mFscFtBMc7iYi5chFF1uniVXN4U6h6UHPYrfivV0aSKANqZefP+L7z3c4TXsMWPFgpAu9WtbFce3qqllZ/NBkVbDuiVYJ46Bz5AuEBTk4R263Fg6dKRGu8j41aLVZ7U7Lz3eXyjN+9ULe4E0+yWMEgI9OtKFRPuEzy0CI7sklXIvNpguffuYrwNtDUvQTTcgoA85+QSLsBmC/YreXal87ms3g//lrsKkO77lxjAgP2MVyG0Z2YgkPU3nMq+u6+Sz1AxCK99FZoT8zaJjPRLZjnV0/FeZpI6c+bp6Tj8NHea6cpNtC7DWgzx804pjZclgZol/8MweMabq94BMVid2uYTuZ2q718dNfVNIu+04j9nirn9r8hdmjk5SWvJHWo/NWF862jpIsWXallYMKfKppQi27IqF5aMZEzkrgBXO+j6OhBbdkgSBcBqnkNhpC3j/17Q41msfptpI02zAi781DSCW4SJFgmseY9NKjXEnRWs6NqtgtatFK3whSo9c8wvPHhgt4ofKYplh5/uU898UkZ1S34OAcLfHq+H9QKdkftRqo+2eAhpGwsLTAlRzwHILeoVhYCUdk62roGtg=
