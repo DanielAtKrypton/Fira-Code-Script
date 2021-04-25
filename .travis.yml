@@ -22,6 +22,8 @@ script:
 - pwsh ./scripts/run.ps1
 deploy:
   provider: releases
+  api_key:
+    secure: "MVPXCzxazAkheuUbKWWuf/FWuon2/JHL+j87sDHNzjzEpb1KCIbBZDdB5/HQ65mdc5e5hzOHK//ifCRq74AMBIQnvkT4om2/x/MaDpRHcP9f1VthANqjpGCMUyYJdiMQMMh9b7Q2g/FUtOQVOqLaor13bWomW/+pT5NnUz2+m36Vz5c6BJUZKSuMNDlozfJUBgIMhkzlkrLJfaL0pv3W8lonawRKnnMFqs89JR1LmIprRQQJqXYunMmyZ2p9+wuqHmr5O+7wM/FlmDh1gb3+pJSys+hqdkUabMK+9o0VSYs2lpZFbs9nlaPdEcEgswxoFVBJRvjEJm+AKvN9C30tTp3HZQ7wfEXYIOns5aIe3VA/Yr4TW2JgHzeuUFw1qXbSscIIcUjIOgKXAYjetGmYPcQNX++y2Yxa3kiK6OtYYghQfaXuIB6CJFHVaYRmpgxptNYcBaUK7X2OQAv8VQymbxDlCEOYs83sJE0M1XAZBLBmhQou/3AxOar4gBhPwXzhSz0JIfX3DjnNHRBjRVs1ObcYypoMCRKLsbmmJejxeVc9Vmb+SN0U+Ew71KyTuUeR8DdVuMJM2bpROxVKrMhWzuLpFY2CZgc5z856kbLFADHUDXzx07F4LO848OqOU44Eqi3YjcewyydwtsfpGEQwXVsjbz5ly7ORtS4thVa5uZs="
   file_glob: true
   file:
   - dist/FiraCodeScript-*.ttf
